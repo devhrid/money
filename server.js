@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 4000
 app.listen(PORT, () => {
     console.log(`SERVER is RUNNING ON PORT ${PORT}`)
-    mongoose.connect(`mongodb://${process.env.dbUsername}:${process.env.dbPassword}@ds261116.mlab.com:61116/money-app`,
+    mongoose.connect(`mongodb+srv://deb:pass123@cluster0-nwbvk.mongodb.net/money-app?retryWrites=true&w=majority`,
         { useNewUrlParser: true },
         () => {
         console.log('Database Connected...')
